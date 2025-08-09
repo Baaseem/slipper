@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chappal Distance Calculator — ചപ്പൽ ദൂരം</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>ചപ്പൽ ദൂരം കണക്ക്</h1>
+      <p class="tag">ഇന്ന് നീ എന്ത് പ്രശ്നം ഉണ്ടാക്കി? 😂</p>
+    </header>
+
+    <main id="slides">
+      <!-- Slide 1 -->
+      <section class="slide" data-slide="1">
+        <h2>ഇന്ന് നീ എന്ത് പ്രശ്നം ചെയ്തിരിക്കുന്നു?</h2>
+        <textarea id="mischiefText" placeholder="ഒരു കോമഡി കാര്യം ഇവിടെ എഴുതൂ... (ഓപ്ഷണൽ)"></textarea>
+        <div class="controls">
+          <button id="toQ">Start - ചോദ്യങ്ങൾ</button>
+        </div>
+      </section>
+
+      <!-- Slide 2 -->
+      <section class="slide" data-slide="2" hidden>
+        <h2>10 MCQ — ഇന്ന് നടന്നത് എന്ത് രീതിയിലാണെന്ന് തരിക്കുക</h2>
+        <form id="quiz"></form>
+        <div class="controls">
+          <button id="backTo1">Back</button>
+          <button id="toCalc">Next - കണക്കാക്കൂ</button>
+        </div>
+      </section>
+
+      <!-- Slide 3 -->
+      <section class="slide" data-slide="3" hidden>
+        <h2>ഫന്നി ഫിസിക്സ് —Distance ഫോർമുല</h2>
+        <div class="field">
+          <label>വിഷമം / стресс (1 - 10): <span id="vVal">5</span></label>
+          <input id="vishamam" type="range" min="1" max="10" value="5" />
+        </div>
+
+        <div class="field">
+          <label>അമ്മയുടെ കോപനില (1 - 10): <span id="aVal">5</span></label>
+          <input id="ammaAnger" type="range" min="1" max="10" value="5" />
+        </div>
+
+        <div class="field">
+          <label>ചപ്പൽ ടൈപ്പ്:</label>
+          <select id="chappalType">
+            <option value="1">സാധാരണ വസ്ത്ര ചപ്പൽ (x1)</option>
+            <option value="1.5">ലത (leather) (x1.5)</option>
+            <option value="2">ശബ്ദമുണ്ടാക്കിയ ചപ്പൽ (x2)</option>
+            <option value="2.5">നഖമുള്ള ചപ്പൽ (x2.5)</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>ലസിനസ് കോഫിഷ്യന്റ് (1 - 10): <span id="lVal">5</span></label>
+          <input id="laziness" type="range" min="1" max="10" value="5" />
+        </div>
+
+        <p class="formula">ഫോർമുല: distance = vishamam × ammaAnger × chappalMultiplier ÷ laziness</p>
+
+        <div class="controls">
+          <button id="backTo2">Back</button>
+          <button id="calcBtn">Calculate Distance</button>
+        </div>
+      </section>
+
+      <!-- Slide 4 -->
+      <section class="slide" data-slide="4" hidden>
+        <h2>ഫലങ്ങൾ — സാമ്പത്തികം</h2>
+        <div id="resultBox" class="resultBox">
+          <!-- populated by JS -->
+        </div>
+        <div class="controls">
+          <button id="restart">Restart</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>Useless but essential — made for giggles 😆</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

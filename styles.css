@@ -1,0 +1,151 @@
+:root {
+  --bg-mustard: #ffcc4d;
+  --bg-burgundy: #800020;
+  --accent: #ffd166;
+  --card: #ffffff;
+  --text: #222;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: var(--bg-mustard);
+  background-image: url('images/chappal-bg.png'); /* <-- your chappal background PNG */
+  background-size: 120px;
+  background-repeat: repeat;
+  color: var(--text);
+}
+
+.app {
+  max-width: 900px;
+  margin: 28px auto;
+  padding: 20px;
+}
+
+header {
+  background: linear-gradient(90deg, var(--bg-burgundy), #a33f40);
+  padding: 18px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+header::after {
+  content: "";
+  background: url('images/mother-throwing-chappal.png') no-repeat center/contain; /* <-- your funny mother image */
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  transform: rotate(-10deg);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header .tag {
+  opacity: 0.95;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+main {
+  margin-top: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.slide {
+  min-height: 320px;
+  padding: 10px;
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--bg-burgundy);
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px dashed rgba(128, 0, 32, 0.2);
+  font-size: 15px;
+}
+
+.field {
+  margin: 12px 0;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+button {
+  background: linear-gradient(90deg, var(--bg-burgundy), #a33f40);
+  border: 0;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.resultBox {
+  padding: 14px;
+  border-radius: 10px;
+  background: #fff;
+  margin-top: 12px;
+  border: 2px solid rgba(0,0,0,0.04);
+}
+
+.formula {
+  font-style: italic;
+  color: #333;
+  opacity: 0.9;
+}
+
+footer {
+  margin-top: 14px;
+  text-align: center;
+  color: var(--bg-burgundy);
+  font-weight: bold;
+}
